@@ -9,4 +9,4 @@ Discussion forum project
 * Articles sorting
 * RESTful
 
-
+## Group model and index

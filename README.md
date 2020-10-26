@@ -9,4 +9,6 @@ Discussion forum project
 * Articles sorting
 * RESTful
 
-## Group model and index
+## ch02
+
+Group model and index

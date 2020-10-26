@@ -15,4 +15,15 @@ class User < ApplicationRecord
     # Returns true if the given record is present in the collection.
     participated_groups.include?(group)
   end
+
+  # Join group
+  def join!(group)
+    participated_groups << group
+  end
+
+  # Leave group
+  def quit!(group)
+    participated_groups.delete(group)
+  end
+
 end

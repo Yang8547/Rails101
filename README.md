@@ -12,3 +12,8 @@ Discussion forum project
 ## ch03
 
 Group "new" "edit" "delete"
+
+[Simple form](https://github.com/heartcombo/simple_form)
+* Add it to your Gemfile: `gem 'simple_form'`
+* Run the following command to install it: `bundle install`
+* Integrated to the Bootstrap `rails generate simple_form:install --bootstrap`

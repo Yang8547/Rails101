@@ -13,3 +13,4 @@ Discussion forum project
 
 * Create/Update/Delete articles
 * Article must have content
+* Pagination [will_paginate](https://github.com/mislav/will_paginate)

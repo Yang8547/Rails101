@@ -9,8 +9,7 @@ Discussion forum project
 * Articles sorting
 * RESTful
 
-## ch05
+## ch06
 
-* Create/Update/Delete articles
-* Article must have content
-* Pagination [will_paginate](https://github.com/mislav/will_paginate)
+* Join/Leave group
+* The owner of the group should default join the group

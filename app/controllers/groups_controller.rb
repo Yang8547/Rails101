@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
     # only signined user can access
-    before_action :authenticate_user! , only: [:new,:create,:edit, :update, :destroy]
+    before_action :authenticate_user! , only: [:new,:create,:edit, :update, :destroy,:join,:quit]
     # only owner can edit/update/delete the specific group
     before_action :find_group_and_check_permission, only: [:edit, :update, :destroy]
 
@@ -49,6 +49,32 @@ class GroupsController < ApplicationController
         
         @group.destroy
         redirect_to groups_path, alert: "Group Deleted"
+    end
+
+    def join
+        @group = Group.find(params[:id])
+        
+        if !current_user.is_member_of?(@group)
+        current_user.join!(@group)
+        flash[:notice] = "Joined!"
+        else
+        flash[:warning] = "You are Member"
+        end
+    
+        redirect_to group_path(@group)
+    end
+  
+    def quit
+        @group = Group.find(params[:id])
+    
+        if current_user.is_member_of?(@group)
+        current_user.quit!(@group)
+        flash[:alert] = "Leaved!"
+        else
+        flash[:warning] = "You are not a member of this group"
+        end
+    
+        redirect_to group_path(@group)
     end
 
     

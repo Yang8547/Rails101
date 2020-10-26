@@ -9,11 +9,18 @@ Discussion forum project
 * Articles sorting
 * RESTful
 
-## ch03
+## ch04
 
-Group "new" "edit" "delete"
+Auth ([devise](https://github.com/heartcombo/devise))
 
-[Simple form](https://github.com/heartcombo/simple_form)
-* Add it to your Gemfile: `gem 'simple_form'`
-* Run the following command to install it: `bundle install`
-* Integrated to the Bootstrap `rails generate simple_form:install --bootstrap`
+
+* Install authentication solution -- devise 
+  * gem 'devise'
+  * `bundle install`
+  * `rails generate devise:install`
+  * replace MODEL with the class name used for the application’s users (it’s frequently User but could also be Admin) `rails generate devise MODEL`
+  * `rails db:migrate`
+  * Controller filters and helpers: To set up a controller with user authentication, just add this `before_action`
+* Add signup/signon in navbar
+* Only registered user can create group
+* Only group owner can edit/delete group

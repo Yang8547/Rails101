@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :groups
+
+  # nest route allow us to capture this relationship in our routing
+  resources :groups do
+    resources :posts
+  end
+
   root to: 'groups#index'
 end

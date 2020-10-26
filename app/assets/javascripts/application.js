@@ -1,1 +1,2 @@
-//= require bootstrap/alert
+//= require jquery
+//= require bootstrap-sprockets

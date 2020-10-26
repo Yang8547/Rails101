@@ -30,6 +30,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 # add bootstrap
 gem 'bootstrap-sass'
+gem 'jquery-rails'
 
 # add simple form
 gem 'simple_form'

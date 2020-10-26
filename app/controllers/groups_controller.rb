@@ -15,6 +15,16 @@ class GroupsController < ApplicationController
         @group = Group.find(params[:id])
     end
 
+    def update 
+        @group = Group.find(params[:id])
+        if @group.update(group_params)
+            # notice == Convenience accessor for flash[:notice]
+            redirect_to groups_path, notice: "Update Success"
+        else
+            render 'edit'
+        end
+    end
+
     def create
         @group = Group.new(group_params)
         if(@group.save)

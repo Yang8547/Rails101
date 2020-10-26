@@ -10,4 +10,9 @@ class User < ApplicationRecord
   # participated group
   has_many :group_relationships
   has_many :participated_groups, through: :group_relationships, source: :group
+
+  def is_member_of?(group)
+    # Returns true if the given record is present in the collection.
+    participated_groups.include?(group)
+  end
 end

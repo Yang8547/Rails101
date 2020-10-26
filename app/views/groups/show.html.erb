@@ -6,6 +6,14 @@
         <% end %>
 
         <%= link_to("Write a Post", new_group_post_path(@group), class: "btn btn-default pull-right")%>
+
+         <span class="pull-right">
+            <% if current_user && current_user.is_member_of?(@group) %>
+                <label class="label label-success"> Group Member </label>
+            <% else %>
+                <label class="label label-warning"> Not Group Member </label>
+            <% end %>
+        </span>
     </div>
   
 

@@ -9,6 +9,6 @@ Discussion forum project
 * Articles sorting
 * RESTful
 
-## ch02
+## ch03
 
-Group model and index
+Group "new" "edit" "delete"

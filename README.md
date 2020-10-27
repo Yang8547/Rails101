@@ -9,7 +9,7 @@ Discussion forum project
 * Articles sorting
 * RESTful
 
-## ch06
+## ch07
 
-* Join/Leave group
-* The owner of the group should default join the group
+* Show all my published posts
+* Show all my participated group

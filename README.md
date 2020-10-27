@@ -13,3 +13,4 @@ Discussion forum project
 
 * Show all my published posts
 * Show all my participated group
+* Edit and delete post

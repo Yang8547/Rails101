@@ -9,8 +9,7 @@ Discussion forum project
 * Articles sorting
 * RESTful
 
-## ch07
+## ch08
 
-* Show all my published posts
-* Show all my participated group
-* Edit and delete post
+* Helper
+* Partial
